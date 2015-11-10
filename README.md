@@ -45,7 +45,8 @@ This Git Repository will demonstrate a Simple Build and Deploy using Jenkins on 
 4.  Add a step to automate the actual build trigger via jenkins-cli command line and observer the output  
 
 ##Issues
-1. The very first time, `vagrant up` is executed ~~will~~ may fail at the jenkins plugins download section. If this happens, run `vagrant reload --provision` at the command
+1. The very first time, `vagrant up` is executed ~~will~~ may fail at the jenkins plugins download section. If this happens, run `vagrant reload --provision` at the command prompt
+2. If the plugins still fail, `vagrant ssh` onto the box and then issue the command `sudo -rm /home/jenkins/jenkins-cli.jar` which may be corrupt ( zero bytes?) and then run `vagrant reload --provision` at the command prompt.
 
 ##Notes
 1. This project was created on a Mac
