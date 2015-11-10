@@ -2,9 +2,9 @@
 
 # Install docker
 apt-get update -qq
-apt-get install -y docker.io
-ln -sf /usr/bin/docker.io /usr/local/bin/docker
-sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
+#apt-get install -y docker.io
+#ln -sf /usr/bin/docker.io /usr/local/bin/docker
+#sed -i '$acomplete -F _docker docker' /etc/bash_completion.d/docker.io
 
 # Install tcl
 apt-get install -y tcl-dev
@@ -29,7 +29,12 @@ sudo -Hu jenkins java -jar /home/jenkins/jenkins.war -Djava.awt.headless=true --
 sleep 20
 
 # download the jenkins-cli
-wget -q -O - http://localhost:9080/jnlpJars/jenkins-cli.jar > /home/jenkins/jenkins-cli.jar
+if [ ! -f /home/jenkins/jenkins-cli.jar ]
+then
+	sleep 10 #potential hack to prevent the issues observed when running first time ?
+	wget -q -O - http://localhost:9080/jnlpJars/jenkins-cli.jar > /home/jenkins/jenkins-cli.jar
+fi
+
 
 #install plugins
 sudo -Hu jenkins java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:9080 install-plugin docker-build-step
@@ -42,6 +47,7 @@ sudo -Hu jenkins java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:908
 sudo -Hu jenkins java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:9080 install-plugin copyartifact
 sudo -Hu jenkins java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:9080 install-plugin external-monitor-job
 sudo -Hu jenkins java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:9080 install-plugin saferestart
+sudo -Hu jenkins java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:9080 install-plugin greenballs 
 
 #restart jenkins
 sudo -Hu jenkins java -jar /home/jenkins/jenkins-cli.jar -s http://localhost:9080 safe-restart
