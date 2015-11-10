@@ -28,6 +28,7 @@ This Git Repository will demonstrate a Simple Build and Deploy using Jenkins on 
 
 ##Further Steps
 1. To **tear down the VM** and redeploy, issue the command `vagrant destroy`  
+2. run `vagrant up` and follow the above steps from 3 onwards  
 
 ##Future improvements
 1.  Use Docker with [docker-tcl](https://github.com/efrecon/docker-tcl) to deploy the tcl application  
