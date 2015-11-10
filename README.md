@@ -10,6 +10,14 @@ This Git Repository will demonstrate a Simple Build and Deploy using Jenkins on 
 6. The Test job will execute the tcl script ( currently on the the one VM)
 7. The output will be asserted and if true, the Test Job will Pass
 
+##To see a failed Build Job
+1. Edit the Build Configuration as per the screenshot
+2. ![Alt text](/screenshots/force-build-job-fail.png?raw=true "Force a failed Build Job")
+
+##To see a failed Test Job
+1. Edit the Test Configuration as per the screenshot
+2. ![Alt text](/screenshots/force-test-job-fail.png?raw=true "Force a failed Test job")
+
   
 ##Pre-requisites (Host Machine - Your Mac or Windows or Linux physical machine)  
 1. Download and install [VirtualBox](https://www.virtualbox.org)    
