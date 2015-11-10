@@ -1,5 +1,5 @@
 ##Purpose and Aim  
-This Git Repository will demonstrate a Simple Build and Deploy using Jenkins on a linux VM via Vagrant.
+This Git Repository will demonstrate a Simple Build and Deploy using Jenkins on a linux VM via Vagrant. The Vagrant box will spin up a ubuntu VM, update the packages, install tcl, install java needed for jenkins , install jenkins, install the plugins and install the pre-configured jenkins jobs ( build and test).
   
 ##Pre-requisites (Host Machine - Your Mac or Windows or Linux physical machine)  
 1. Download and install [VirtualBox](https://www.virtualbox.org)    
@@ -13,18 +13,18 @@ This Git Repository will demonstrate a Simple Build and Deploy using Jenkins on 
 ![Alt text](/screenshots/Jenkins-Screen-1.png?raw=true "Jenkins-CI")  
 4. Click on the Build Job  
 ![Alt text](/screenshots/Click-Build-Now.png?raw=true "Click Build Now")  
-5. 
+5. After a few seconds, if the build was successful then you should see  
+![Alt text](/screenshots/post-success-execution.png?raw=true "Post Successful execution")
 
 
 ##Future improvements
-1.  Use Docker with Docker-tcl to deploy the tcl application  
-2.  Startup Jenkins in a Docker container
-3.  Add Steps to Boostratp.sh that skips a step if items are already done ( performance enhancement)  
-4.  
+1.  Use Docker with [docker-tcl](https://github.com/efrecon/docker-tcl) to deploy the tcl application  
+2.  Startup [Jenkins CI](https://github.com/jenkinsci/docker) in a Docker container  
+3.  Add Steps to Boostratp.sh that skips a step if items are already done ( performance enhancement) 
+4.  Add a step to automate the actual build trigger via jenkins-cli command line and observer the output  
 
 ##Issues
 1. The very first time, `vagrant up` is executed will fail at the jenkins plugins download section. If this happens, run `vagrant reload --provision` at the command
 
 ##Notes
 1. This project was created on a Mac
-2. 
