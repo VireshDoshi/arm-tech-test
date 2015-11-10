@@ -12,7 +12,7 @@ This Git Repository will demonstrate a Simple Build and Deploy using Jenkins on 
 3. Open Jenkins-CI by clicking on  [http://localhost:9080](http://localhost:9080)  
 ![Alt text](/screenshots/Jenkins-Screen-1.png?raw=true "Jenkins-CI")  
 4. Click on the Build Job  
-![Alt text](/screenshots/Click-Build-Now.png.png?raw=true "Click Build Now")  
+![Alt text](/screenshots/Click-Build-Now.png?raw=true "Click Build Now")  
 5. 
 
 
