@@ -1,10 +1,12 @@
 # arm-tech-test
-Purpose and Aim  
+##Purpose and Aim  
 This Git Repository will demomstrate Jenkins on a linux machine.  
   
-Pre-requisites (Host Machine - Your Mac or Windows or Linux physical machine)  
+##Pre-requisites (Host Machine - Your Mac or Windows or Linux physical machine)  
 1. Download and install VirtualBox  
 2. Download and install Vagrant  
 3. Download and install Git  
 
-
+##Steps  
+1. Clone this git repository to your Host Machine
+2. run `vagrant up`
